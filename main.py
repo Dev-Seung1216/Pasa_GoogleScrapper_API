@@ -10,7 +10,7 @@ def home():
     return {"status": "alive", "message": "PASA Google Scraper API"}
 
 
-@app.get("/scrape/{com.pasa.smartpasa}")
+@app.get("/scrape/{app_id}")
 def scrape_reviews(app_id: str, lang: str = 'ko', country: str = 'kr', count: int = 20):
     try:
         result, _ = reviews(
